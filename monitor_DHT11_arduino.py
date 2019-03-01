@@ -1,23 +1,23 @@
 import smbus
 import time
 import datetime
-
+# commentaire
 # remplacer 0 par 1 si nouveau raspberry pi
 bus = smbus.SMBus(1)
 address = 0x12
 
 while True:
- # envoi d'un signal à l'arduino
+ # envoi d'un signal Ã  l'arduino
  bus.write_byte(address, 3)
 
  # pause de 1 seconde pour laisser le temps de traitement
  time.sleep(1)
  reponse = bus.read_byte(address)
 
- # affichage de la température
- print("La température est de:", reponse, "°C")
+ # affichage de la tempÃ©rature
+ print("La tempÃ©rature est de:", reponse, "Â°C")
 
- # ecriture de la réponse dans un fichier
+ # ecriture de la rÃ©ponse dans un fichier
  reponse = str(reponse)
  fichier = open("temp_history.txt", "a")
  date = datetime.datetime.now()
