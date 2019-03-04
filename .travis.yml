@@ -5,4 +5,4 @@ install:
     - pip install -U mypy
     - pip install -r requirements.txt
 script:
-    - mypy monitor_DHT11_arduino.py
+    - mypy --ignore-missing-imports monitor_DHT11_arduino.py
