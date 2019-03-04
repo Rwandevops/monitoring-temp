@@ -2,7 +2,7 @@ language: python
 python:
     - "3.4"
 Before install:
-    - pip install mypy
+    - pip install -U mypy
 install: "pip install -r requirements.txt"
 script:
     - mypy monitor_DHT11_arduino.py
