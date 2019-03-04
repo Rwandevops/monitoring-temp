@@ -20,8 +20,7 @@ while True:
  # ecriture de la réponse dans un fichier
  reponse = str(reponse)
  fichier = open("temp_history.txt", "a")
- date = datetime.datetime.now()
- date = str(date)
+ date = str(datetime.datetime.now())
  fichier.write(date)
  fichier.write("\t")
  fichier.write(reponse)
